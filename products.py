@@ -9,6 +9,7 @@ while True:
 print('------------------------------------')
 print(products)
 print('------------------------------------')
-with open('products.txt', 'w') as f:
+with open('products.csv', 'w', encoding = 'utf-8') as f:
+	f.write('品名, 價格\n')
 	for p in products:
 		f.write(p[0]+ ','+ str(p[1])+'\n')
